@@ -1,0 +1,28 @@
+{
+  "name": "refactory-catalyst003-final-technical-assessment",
+  "version": "1.0.0",
+  "description": "Fanny's Assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyayic/Refactory-Catalyst003-Final-Technical-Assessment.git"
+  },
+  "author": "Fanny Nyayic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nyayic/Refactory-Catalyst003-Final-Technical-Assessment/issues"
+  },
+  "homepage": "https://github.com/Nyayic/Refactory-Catalyst003-Final-Technical-Assessment#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "moongoose": "0.0.5",
+    "nodemon": "^2.0.1",
+    "pug": "^2.0.4"
+  }
+}
