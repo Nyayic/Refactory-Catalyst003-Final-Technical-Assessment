@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const studentSchema = new mongoose.Schema({
     sur_name:{
         type: String,
-        required:'Please Enter sur name'
+        required:'Please Enter Sur name'
     },
     given_name: {
         String,
@@ -25,17 +25,14 @@ const studentSchema = new mongoose.Schema({
 
 studentSchema.add({email: {type: String, unique:true, required:'Please this email already exists'} })
 
-
-//authenticate input against database
-// registerSchema.statics.authenticate = async function (user_name, password) {
-//     const user = await this.findOne({ user_name: user_name })
-//     if (!user) {
-//         throw new Error('User not found.');
-//     }
-//     const match = await bcrypt.compare(password, user.password)
-//     if (match) {
-//         return user;
-//     }
-// }
+studentSchema.statics.authenticate = async function(sur_name, given_name){
+    const Student = await this.findOne({sur_name:sur_name})
+    if(!student){
+        throw new Error('Name is required')
+    }
+    else{
+        return student;
+    }
+}
 
 module.exports = mongoose.model("Student", studentSchema)

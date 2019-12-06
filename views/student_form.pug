@@ -1,75 +1,72 @@
 extends layouts.pug
 
 block appContent
-
-
-        
-        div.row.justify-content-center
-            div.col-md-6
-                header.card-header
-                    h4.card-title STUDENT DETAILS ENTRY FORM
-                div.card-body
-                    form(method="POST")
-                        div.form-row
-                            div.col-sm-6.form-group
-                                label Sur Name *:
-                                input.form-control(name="sur_name",type="text", placeholder="Enter your sur name")
-                            
-                            div.col-sm-6.form-group
-                                label Given Name *:
-                                input.form-control(name="given_name",type="text",placeholder="Enter your given name")
-   
-                        div.form-group
-                            label.form-check.form-check-inline Gender *:
-                                input.form-check-input(type="radio" name="gender" value="Male")
-                                span.form-check-label Male  
-                            label.form-check.form-check-inline
-                                input.form-check-input(type="radio" name="gender" value="Female")
-                                span.form-check-label Female
-                            
-                        div.form-row
-                            div.col-md-6.form-group    
-                                label Date of Birth *:
-                                input.form-control(name="city" type="date")
-
-                            div.col-md-6.form-group    
-                                    label Country *:
-                                    select.form-control(name="country" type="text")
-                                        option(value="" selected="") select country...
-                                        option(value="Uzbekistan") Uzbekistan
-                                        option(value="Russia") Russia
-                                        option(value="United States" ) United States
-                                        option(value="India") India
-                                        option(value="Afghanistan") Afghanistan
-                                        option(value="Uganda") Uganda
-                        div.form-row
-                            div.col-sm-6.form-group
-                                label Place of Residence *:
-                                input.form-control(name="place",type="text", placeholder="Enter your place of residence")
-                            
-                            div.col-sm-6.form-group
-                                label Phone Number *:
-                                input.form-control(name="phone",type="tel",placeholder="E.g 07XXXXXXXX or +256XXXXXXXX")
-   
-
-                        div.form-row
-                            div.col.form-group
-                                div.form-group
-                                    label Email Address *:
-                                    input.form-control(name="email" type="email", placeholder="E.g applicant@gmail.com")            
+    div.row.justify-content-center
+        div.col-md-6
+            header.card-header
+                h4.card-title(style="background-color:purple") STUDENT DETAILS ENTRY FORM
+            div.card-body
+                form(method="POST" action="/")
+                    div.form-row
+                        div.col-sm-6.form-group
+                            label Sur Name *:
+                            input.form-control(name="sur_name",type="text", placeholder="Enter your sur name")
                         
-                        div.form-row
-                            div.col-sm-6.form-group
-                                label Skills :
-                                small (    Separate Skills With commas) *
-                                input.form-control(name="skills",type="textarea")
-                            
-                            div.col-sm-6.form-group
-                                label Projects *:
-                                small (    Separate Projects With commas) *
-                                input.form-control(name="projects",type="textarea")
-   
+                        div.col-sm-6.form-group
+                            label Given Name *:
+                            input.form-control(name="given_name",type="text",placeholder="Enter your given name")
 
+                    div.form-group
+                        label.form-check.form-check-inline Gender *:
+                            input.form-check-input(type="radio" name="gender" value="Male")
+                            span.form-check-label Male  
+                        label.form-check.form-check-inline
+                            input.form-check-input(type="radio" name="gender" value="Female")
+                            span.form-check-label Female
+                        
+                    div.form-row
+                        div.col-md-6.form-group    
+                            label Date of Birth *:
+                            input.form-control(name="dob" type="date")
+
+                        div.col-md-6.form-group    
+                                label Country *:
+                                select.form-control(name="country" type="text")
+                                    option(value="" selected="") select country...
+                                    option(value="Uzbekistan") Uzbekistan
+                                    option(value="Russia") Russia
+                                    option(value="United States" ) United States
+                                    option(value="India") India
+                                    option(value="Afghanistan") Afghanistan
+                                    option(value="Uganda") Uganda
+                    div.form-row
+                        div.col-sm-6.form-group
+                            label Place of Residence *:
+                            input.form-control(name="place",type="text", placeholder="Enter your place of residence")
+                        
+                        div.col-sm-6.form-group
+                            label Phone Number *:
+                            input.form-control(name="phone",type="tel",placeholder="E.g 07XXXXXXXX or +256XXXXXXXX")
+
+
+                    div.form-row
+                        div.col.form-group
                             div.form-group
-                            input.btn.btn-primary.btn-block(type="submit", value="Register")
-                            input.btn.btn-primary.btn-block(type="reset", value="Cancel")
+                                label Email Address *:
+                                input.form-control(name="email" type="email", placeholder="E.g applicant@gmail.com")            
+                    
+                    div.form-row
+                        div.col-sm-6.form-group
+                            label Skills :
+                            small       (Separate Skills With commas) *
+                            input.form-control(name="skills",type="textarea")
+                        
+                        div.col-sm-6.form-group
+                            label Projects *:
+                            small       (Separate Projects With commas) *
+                            input.form-control(name="projects",type="textarea")
+
+
+                        div.form-group
+                        input.btn.btn-primary(type="submit", value="Register")
+                        input.btn.btn-primary(type="reset", value="Cancel")

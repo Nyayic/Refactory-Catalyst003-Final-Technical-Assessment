@@ -1,0 +1,31 @@
+extends layouts.pug
+block appContent
+    div.row.justify-content-center
+            div.col-md-6
+                header.card-header
+                    a.float-right.btn.btn-outline-primary Log in
+                    h4.card-title REGISTERED STUDENTS
+                div.jumbotron
+                    header.thread-dark
+                        p Sur Name
+                        p Given Name
+                        p Gender
+                        p Date of Birth
+                        p Country
+                        p Place of Residence
+                        p Phone Number
+                        p Email ID
+                    tbody
+                        each student in students
+                            tr
+                                td #{student.sur_name}
+                                td #{student.given_name}
+                                td #{student.gender}
+                                td #{student.dob}
+                                td #{student.country}
+                                td #{student.place}
+                                td #{student.phone}
+                                td #{student.email}
+                                
+                                
+                                
