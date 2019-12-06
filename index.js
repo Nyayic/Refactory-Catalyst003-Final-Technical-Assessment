@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 //mongoose 
-// mongodb+srv://fanny:<password>@cluster0-raidz.mongodb.net/test?retryWrites=true&w=majority;
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/student",{useNewUrlParser:true, useUnifiedTopology: true});

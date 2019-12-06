@@ -6,24 +6,24 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-    router.render('student_form')
+    res.render('studentForm')
     
 })
 
-// router.post("/", (req, res) => { 
-//     const register = new Student(req.body);
-//     Student.save()
-//     .then(item => {
-//         Student.find().then(
-//              items =>{ 
-//                  res.render('student_details', {students:items}); 
-//              })
+router.post("/", (req, res) => { 
+    const student = new Student(req.body);
+       Student.save()
+         .then(item => {
+            Student.find().then(
+                 items =>{ 
+                 res.render('studentForm', {students:items}); 
+             })
             
-//        })
-//       .catch(err => {
-//         res.status(500).send("Unable to save to database");
-//       });
-// })
+     })
+      .catch(err => {
+        res.status(500).send("Unable to save to database");
+      });
+ })
 
 
 // app.post('/student_form',
